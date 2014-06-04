@@ -1,0 +1,26 @@
+<div style="position:absolute;left:38%;top:80%;"><center>
+<button onclick="moveTransition('move','right',200,500)">Move Right</button>
+<button onclick="moveTransition('move','left',200,500)">Move Left</button>
+<button onclick="moveTransition('move','bottom',200,500)">Move bottom</button>
+<button onclick="moveTransition('move','top',200,500)">Move top</button><br>
+<button onclick="showcode()">Get code</button>
+<br>
+<div id="code" width="500px"></div></center></div>
+<div id="move" style="position:absolute;left:450px;top:100px;"><img src="images/basket.png"></div>
+
+<script src='jsAnim.js'>
+</script>
+
+<script>
+
+
+
+
+
+
+function showcode()
+{
+
+document.getElementById("code").innerHTML="<textarea >moveTransition(element_name,direction,By_how_much_px,in_how_much_time);</textarea>";
+}
+</script>
