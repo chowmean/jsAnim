@@ -1,0 +1,24 @@
+<div style="position:absolute;left:38%;top:60%;">
+
+<center>
+<u>NOTE:
+Do define following elements for this effect in style.(top,left,height,width)</u><br><br><br><br>
+<button onclick="flip('move','horizontal',500)">Flip horizontally</button>
+<button onclick="flip('move','vertical',500)">Flip vertically</button>
+<br>
+<button onclick="showcode()">Get code</button>
+<br>
+<div id="code" width="500px"></div></center></div>
+<div id="move" style="position:absolute;left:450px;top:100px;width:100px;background-image:url('images/basket.png');background-size:100% 100%;height:100px;"></div>
+
+<script src='jsAnim.js'>
+</script>
+
+<script>
+
+
+function showcode()
+{
+document.getElementById("code").innerHTML="<textarea >flip(element_name,'horizontal/vertical',time);</textarea>";
+}
+</script>
