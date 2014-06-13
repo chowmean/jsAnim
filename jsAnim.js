@@ -150,6 +150,51 @@ hlimit=hlimit/(c/interval);
 }
 
 
+var sendTo=function(a,b,c,d)
+{
+l=document.getElementById(a);
+console.log(l);
+var pos=l.style.left;
+var postop=l.style.top;
+if(!l.style.position)
+l.style.position='relative';
+if(pos=="")
+	{
+	l.style.left='0px';
+	}
+if(postop=="")
+	{
+	l.style.top='0px';
+	}
+	
+	
+	var t=0;
+	ll=parseInt(pos)-parseInt(b);
+	tt=parseInt(postop)-parseInt(c);
+	var intervalleft=10;
+	
+	console.log(tt);
+	
+	left=ll/(d/intervalleft);
+	topp=tt/(d/intervalleft);
+	
+	console.log(left);
+	console.log(topp);
+	{
+	while(t<d)
+		{t=t+intervalleft;;
+	
+			{setTimeout(function(){l.style.left = parseInt(l.style.left) - parseInt(left) + 'px';
+			l.style.top = parseInt(l.style.top) -parseInt(topp) + 'px';
+			},t);}
+		
+	
+		}
+	
+	}	
+
+}
+
 
 
 
