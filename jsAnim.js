@@ -22,7 +22,15 @@ Modules:
 **/
 
 
-
+function waitSeconds(iMilliSeconds) {
+    var counter= 0
+        , start = new Date().getTime()
+        , end = 0;
+    while (counter < iMilliSeconds) {
+        end = new Date().getTime();
+        counter = end - start;
+    }
+}
 
 var move=function(a,b,c)
 {
@@ -98,7 +106,7 @@ if(postop=="")
 
 
 
-var flip= function(a,b,c)
+var flip= function(a,b,c,repeat=1)
 {
 l=document.getElementById(a);
 var pos=l.style.left;
@@ -147,7 +155,17 @@ hlimit=hlimit/(c/interval);
 		}
 	}	
 
+
+
+if (repeat<=0) {;}
+else {repeat=repeat-1;console.log(repeat);
+
+//=============i was here ==================//
+
+
+} 
 }
+
 
 
 var sendTo=function(a,b,c,d)

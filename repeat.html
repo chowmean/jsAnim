@@ -3,8 +3,7 @@
 <center>
 <u>NOTE:
 Do define following elements for this effect in style.(position,top,left,height,width)</u><br><br><br><br>
-<button onclick="flip('move','horizontal',500,3)">Flip horizontally</button>
-<button onclick="flip('move','vertical',500)">Flip vertically</button>
+<button onclick="repeat('flip',['move','horizontal',500])">Flip horizontally</button>
 <br>
 <button onclick="showcode()">Get code</button>
 <br>
@@ -15,6 +14,19 @@ Do define following elements for this effect in style.(position,top,left,height,
 </script>
 
 <script>
+
+
+var repeat=function(function_name,arr)
+{
+
+
+console.log(arr.valueOf());
+setTimeout(function_name(arr.valueOf()));
+
+}
+
+
+
 function showcode()
 {
 document.getElementById("code").innerHTML="<textarea >flip(element_name,'horizontal/vertical',time);</textarea>";
