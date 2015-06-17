@@ -196,6 +196,20 @@ if(postop=="")
 }
 
 
+var visible=function(a,b)
+{
+l=document.getElementById(a);
+		{
+		if(b=="show")
+			{l.style.opacity = 1 ;
+			}
+
+		if(b=='hide')
+			{l.style.opacity = 0;
+			}
+		}
+	
+}
 
 
 

@@ -1,45 +1,27 @@
 <div style="position:absolute;left:38%;top:80%;"><center>
-<button onclick="visible('move','show',500)">show</button>
-<button onclick="visible('move','hide',500)">hide</button>
+<button onclick="visible('move','show')">show</button>
+<button onclick="visible('move','hide')">hide</button>
 
 <button onclick="showcode()">Get code</button>
 <br>
 <div id="code" width="500px"></div></center></div>
+
+
+
+
 <div id="move" style="position:absolute;left:450px;top:100px;opacity:0.2;"><img src="images/basket.png"></div>
+
+
+
 
 <script src='jsAnim.js'>
 </script>
 
 <script>
-var visible=function(a,b,c)
-{
-l=document.getElementById(a);
-console.log(l.style.opacity);
-
-
-var t=0;
-	var interval=10;
-	c=(1/(c/interval))/1.0;
-
-	{
-	while(t<b)
-		{t=t+interval;
-		if(b=="show")
-			{setTimeout(function(){l.style.opacity = parseFloat(l.style.opacity) + parseFloat(c) },t);console.log(l.style.opacity);}
-		if(b=='hide')
-			{setTimeout(function(){l.style.left = parseInt(l.style.left) - parseInt(c) + 'px'},t);}
-		}
-	
-	}	
-}
-
-
-
-
 
 function showcode()
 {
 
-document.getElementById("code").innerHTML="<textarea >moveTransition(element_name,direction,By_how_much_px,in_how_much_time);</textarea>";
+document.getElementById("code").innerHTML="<textarea >visible(element_name,show or hide);</textarea>";
 }
 </script>
